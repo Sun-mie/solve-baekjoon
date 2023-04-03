@@ -1,3 +1,4 @@
 function solution(my_string) {
-    return [...my_string].filter(v => /[0-9]/.test(v)).reduce((a,v)=> a+=parseInt(v),0);
+    //let arr = [...my_string].filter(v => /[0-9]/.test(v)).reduce((a,v)=> a+=parseInt(v),0);
+    return my_string.match(/[0-9]/g).reduce((a,v)=> parseInt(a)+parseInt(v));
 }
