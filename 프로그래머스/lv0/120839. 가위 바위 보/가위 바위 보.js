@@ -1,3 +1,8 @@
 function solution(rsp) {
-    return [...rsp].map((v)=>{return v==='2' ? '0' : v==='0' ? '5' : '2'}).join('');
+    let arr = {
+        2 : 0,
+        0 : 5,
+        5 : 2
+    }
+    return [...rsp].map((v)=>arr[v]).join('');
 }
