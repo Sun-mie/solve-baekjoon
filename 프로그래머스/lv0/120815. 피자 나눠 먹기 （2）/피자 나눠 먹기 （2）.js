@@ -1,8 +1,7 @@
 function solution(n) {
-    let ave = 6;
-    let answer = 0;
-    for(let pizza=1; !Number.isInteger((6*pizza)/n); pizza ++){
-        answer = pizza
+    let pizza = 1;
+    while(!Number.isInteger((6*pizza)/n)){
+        pizza++;
     }
-    return answer+1;
+    return pizza;
 }
