@@ -4,6 +4,6 @@ function solution(my_string) {
     for(let a of my_string){
         temp.add(a)
     }
-    temp.forEach(a=> answer.push(a))
+    temp.forEach(a => answer.push(a))
     return answer.join('');
 }
