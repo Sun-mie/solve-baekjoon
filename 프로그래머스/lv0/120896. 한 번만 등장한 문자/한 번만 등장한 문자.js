@@ -5,7 +5,9 @@ function solution(s) {
     // Object.keys(temp).map(v => {if(temp[v] === 1) answer.push(v)});
     // return answer.sort().join('');
     
-    let answer = [];
-    for(let v of s) if(s.indexOf(v) === s.lastIndexOf(v)) answer.push(v);
-    return answer.sort().join('');
+    // let answer = [];
+    // for(let v of s) if(s.indexOf(v) === s.lastIndexOf(v)) answer.push(v);
+    // return answer.sort().join('');
+    
+    return [...s].filter(v => s.match(new RegExp(v, "g")).length === 1).sort().join('')
 }
